@@ -5,9 +5,9 @@ import numpy as np
 # Using system() method to execute
 # shell commands
 filename="temp"+str(int(np.random.random()*1000))+".txt"
-print(filename)
-creating_command='adb shell am start -n com.google.ar.core.codelab.rawdepth/.RawDepthCodelabActivity | adb logcat -d| findstr "convertRawDepthImagesTo3dPointBuffer: " >'+filename
-print(creating_command)
+#print(filename)
+creating_command='adb shell am start -n com.google.ar.core.codelab.rawdepth/.RawDepthCodelabActivity | adb logcat -d| findstr "depthlength" >'+filename
+#print(creating_command)
 #os.system('adb shell am start -n com.google.ar.core.codelab.rawdepth/.RawDepthCodelabActivity | adb logcat | findstr "convertRawDepthImagesTo3dPointBuffer: " >temp3.txt')
 
 print(os.path.basename('main.py'))
